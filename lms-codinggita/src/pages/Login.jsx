@@ -16,7 +16,7 @@ function Login() {
         e.preventDefault();
         const isLogin = loginDetails(uid, password);
         if (isLogin) {
-            navigate("/dashboard");
+            navigate("/student");
         } else {
             alert("Invalid UID or Password");
         }
@@ -115,7 +115,7 @@ function Login() {
                                 onChange={(e) => setPassword(e.target.value)}
                                 className="flex h-10 w-full rounded-md border border-white/10 bg-black/60 px-3 py-2 text-sm text-white placeholder:text-gray-400 shadow-sm outline-none focus-visible:ring-2 focus-visible:ring-white/30"
                                 id="password"
-                                placeholder="••••••••"
+                                placeholder="••••••"
                                 autoComplete="current-password"
                                 required
                                 type="password"
