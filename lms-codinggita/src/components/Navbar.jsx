@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X, ChevronDown, Settings } from "lucide-react";
-import { getInitials } from "../utils/getinitials";
+import { getInitials } from "../utils/getInitials";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);

@@ -1,36 +1,38 @@
+import React from "react";
+import FeatureCard from "../components/FeatureCard";
 import { useNavigate } from "react-router-dom";
-import Card from "../components/Featurecard";
 
-function Landing() {
+const Landing = () => {
+  const navigate = useNavigate();
+  return (
+    <div className="min-h-screen min-w-screen bg-black flex flex-col items-center justify-center text-center px-6">
+      <h1 className="text-6xl font-bold text-white">Coding</h1>
 
-    const navigate = useNavigate();
+      <h1 className="text-6xl font-bold text-gray-400">Gita</h1>
+      <p className="text-gray-400 mt-4 text-lg">
+        Smart, simple, and reliable attendance for modern classrooms.
+      </p>
 
-    return (
-        <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6">
+      <button
+        onClick={() => navigate("/login")}
+        className="inline-flex items-center rounded-lg mt-10 px-5 py-3 text-sm font-semibold transition-colors bg-white text-black hover:bg-neutral-200"
+      >
+        Login
+      </button>
 
-            {/* Heading */}
-            <div className="text-center mb-16">
-                <h1 className="text-7xl font-extrabold">
-                    Coding <br /><span className="text-gray-200">Gita</span>
-                </h1>
+      <div className="mt-14 grid gap-6 sm:grid-cols-2">
+        <FeatureCard
+          title="Role-based dashboards"
+          description="Admin, Mentor, and Student experiences tailored to their needs."
+        />
 
-                <p className="text-gray-400 mt-4 text-lg">
-                    Smart, simple, and reliable attendance for modern classrooms.
-                </p>
-
-                <button
-                    onClick={() => navigate("/login")}
-                    className="mt-6 bg-white text-black px-6 py-2 rounded-lg hover:bg-gray-200"
-                >
-                    Login
-                </button>
-            </div>
-
-            {/* card */}
-            <Card />
-
-        </div>
-    )
-}
+        <FeatureCard
+          title="Fast and secure access"
+          description="Encrypted sessions and streamlined navigation."
+        />
+      </div>
+    </div>
+  );
+};
 
 export default Landing;
