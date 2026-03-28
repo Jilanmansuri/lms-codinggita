@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function AttendanceCard({ attendance }) {
   const { semester, present, total, bonus, percentLabel, startDate, endDate } =
@@ -7,7 +8,8 @@ export default function AttendanceCard({ attendance }) {
   const percent = Math.round((present / total) * 100);
 
   return (
-    <div className="rounded-xl border border-neutral-800 bg-neutral-900 mb-6">
+    <Link to="/student/attendance" className="block group">
+      <div className="rounded-xl border border-neutral-800 bg-neutral-900 mb-6 transition-all hover:border-neutral-700 hover:bg-neutral-800/50">
       {/* HEADER */}
       <div className="p-4 border-b border-neutral-800">
         <div className="flex items-center justify-between">
@@ -52,6 +54,7 @@ export default function AttendanceCard({ attendance }) {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </Link>
   );
 }

@@ -1,20 +1,20 @@
 export const students = [
   {
-    uid: "1001",
-    password: "123",
-    name: "Rajesh Sharma",
-    email: "rajeshranjan22@gmail.com",
-    mobile: "9999999991",
+    uid: "108623",
+    password: "123456",
+    name: "Jilan Mansuri",
+    email: "jilan2410@gmail.com",
+    mobile: "7984088939",
     university: "SUxCG 714",
 
-    image: "https://avatars.githubusercontent.com/u/107463246?v=4",
+    image: "https://avatars.githubusercontent.com/u/224968812?v=4",
 
     attendance: {
       semester: "Semester 2",
-      present: 126,
-      total: 146,
+      present: 168,
+      total: 184,
       bonus: 2,
-      percentLabel: 88,
+      percentLabel: 95,
       startDate: "29/01/2026",
       endDate: "30/06/2026",
     },

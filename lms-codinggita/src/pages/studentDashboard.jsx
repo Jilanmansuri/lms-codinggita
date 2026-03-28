@@ -53,9 +53,13 @@ export default function StudentDashboard() {
         <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <SmallCard title="Need help?" text="Contact your mentor" />
 
-          <SmallCard title="Timetable" text="Check classes (coming soon)" />
+          <SmallCard
+            title="Timetable"
+            text="Check calendar & events"
+            to="/student/calendar"
+          />
 
-          <SmallCard title="Chat" text="View Chat Groups" link />
+          <SmallCard title="Chat" text="View Chat Groups" to="/student/chat" />
         </div>
       </div>
     </div>

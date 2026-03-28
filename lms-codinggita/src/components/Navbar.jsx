@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown, Settings } from "lucide-react";
 import { getInitials } from "../utils/getInitials";
 
@@ -25,17 +26,27 @@ export default function Navbar() {
 
           {/* DESKTOP MENU */}
           <nav className="hidden md:flex items-center gap-1 ml-2">
-            <div className="px-3 py-2 rounded-md text-sm font-medium bg-neutral-800 text-white">
+            <Link
+              to="/student"
+              className="px-3 py-2 rounded-md text-sm font-medium bg-neutral-800 text-white"
+            >
               Dashboard
-            </div>
+            </Link>
 
-            <div className="px-3 py-2 text-sm text-neutral-300 hover:bg-neutral-800 rounded">
+            <Link
+              to="/student/attendance"
+              className="px-3 py-2 text-sm text-neutral-300 hover:bg-neutral-800 rounded"
+            >
               Attendance
-            </div>
-
-            <div className="px-3 py-2 text-sm text-neutral-300 hover:bg-neutral-800 rounded">
+            </Link>
+            <Link
+              to="/student/calendar"
+              className="px-3 py-2 text-sm text-neutral-300 hover:bg-neutral-800 rounded"
+            >
               Calendar
-            </div>
+            </Link>
+
+           
 
             <div className="px-3 py-2 text-sm text-neutral-300 hover:bg-neutral-800 rounded">
               Chat
@@ -49,9 +60,12 @@ export default function Navbar() {
 
               <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-150 absolute left-0 mt-2 w-48 rounded-lg border border-neutral-800 bg-neutral-900 shadow-xl">
                 <div className="p-2 space-y-1">
-                  <div className="px-3 py-2 text-sm hover:bg-neutral-800 rounded">
+                  <Link
+                    to="/student/attendance"
+                    className="block px-3 py-2 text-sm hover:bg-neutral-800 rounded"
+                  >
                     Semester Attendance
-                  </div>
+                  </Link>
 
                   <div className="px-3 py-2 text-sm hover:bg-neutral-800 rounded">
                     Feedback
@@ -128,21 +142,39 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden border-b border-neutral-800 bg-neutral-900/95 backdrop-blur px-4 sm:px-6 lg:px-8 py-3">
           <div className="max-w-7xl mx-auto flex flex-col gap-1">
-            <div className="px-3 py-2 bg-neutral-800 rounded">Dashboard</div>
+            <Link
+              to="/student"
+              className="px-3 py-2 bg-neutral-800 rounded"
+              onClick={() => setOpen(false)}
+            >
+              Dashboard
+            </Link>
 
-            <div className="px-3 py-2 hover:bg-neutral-800 rounded">
+            <Link
+              to="/student/attendance"
+              className="px-3 py-2 hover:bg-neutral-800 rounded"
+              onClick={() => setOpen(false)}
+            >
               Attendance
-            </div>
+            </Link>
 
-            <div className="px-3 py-2 hover:bg-neutral-800 rounded">
+            <Link
+              to="/student/calendar"
+              className="px-3 py-2 hover:bg-neutral-800 rounded"
+              onClick={() => setOpen(false)}
+            >
               Calendar
-            </div>
+            </Link>
 
             <div className="px-3 py-2 hover:bg-neutral-800 rounded">Chat</div>
 
-            <div className="px-3 py-2 hover:bg-neutral-800 rounded">
+            <Link
+              to="/student/attendance"
+              className="px-3 py-2 hover:bg-neutral-800 rounded"
+              onClick={() => setOpen(false)}
+            >
               Semester Attendance
-            </div>
+            </Link>
 
             <div className="px-3 py-2 hover:bg-neutral-800 rounded">
               Feedback
