@@ -6,6 +6,9 @@ import Login from "./pages/Login";
 import StudentDashboard from "./pages/studentDashboard";
 import StudentAttendance from "./pages/StudentAttendance";
 import StudentCalendar from "./pages/StudentCalendar";
+import ApplyLeave from "./pages/ApplyLeave";
+import SemesterAttendance from "./pages/SemesterAttendance";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
       <Route path="/student" element={<StudentDashboard />} />
       <Route path="/student/attendance" element={<StudentAttendance />} />
       <Route path="/student/calendar" element={<StudentCalendar />} />
+      <Route path="/student/apply-leave" element={<ApplyLeave />} />
+      <Route path="/student/semester-attendance" element={<SemesterAttendance />} />
+      <Route path="/student/profile" element={<Profile />} />
     </Routes>
   );
 }

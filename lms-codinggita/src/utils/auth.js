@@ -9,15 +9,25 @@ export const students = [
 
     image: "https://avatars.githubusercontent.com/u/224968812?v=4",
 
-    attendance: {
-      semester: "Semester 2",
-      present: 168,
-      total: 184,
-      bonus: 2,
-      percentLabel: 95,
-      startDate: "29/01/2026",
-      endDate: "30/06/2026",
-    },
+    attendance: [
+      {
+        semester: "Semester 1",
+        startDate: "31/07/2025",
+        endDate: "28/01/2026",
+        present: 258,
+        total: 272,
+        bonus: 0,
+      },
+      {
+        semester: "Semester 2",
+        startDate: "29/01/2026",
+        endDate: "30/06/2026",
+        present: 166,
+        total: 193,
+        bonus: 1,
+      }
+    ],
+
 
     subjects: [
       "SU11 - GIT & GITHUB",
