@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function AssignmentsCard({ assignments, pending }) {
   return (
@@ -16,9 +17,13 @@ export default function AssignmentsCard({ assignments, pending }) {
           <div className="flex items-center gap-3 text-sm text-neutral-400">
             <span>Pending: {pending}</span>
 
-            <span className="text-xs underline hover:text-white cursor-pointer">
-              View all
-            </span>
+            <NavLink
+              to="/student/assignments"
+              className="text-xs underline hover:text-white cursor-pointer"
+            >
+              View All
+            </NavLink>
+
           </div>
         </div>
       </div>

@@ -10,6 +10,7 @@ import AssignmentsCard from "../components/AssignmentsCard";
 import EventsCard from "../components/EventsCard";
 import SmallCard from "../components/SmallCard";
 
+
 export default function StudentDashboard() {
   const data = localStorage.getItem("user");
   const user = data ? JSON.parse(data) : null;

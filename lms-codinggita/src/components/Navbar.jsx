@@ -14,9 +14,10 @@ export default function Navbar() {
   // 🔥 active style helper
   const navClass = ({ isActive }) =>
     isActive
-      ? "px-3 py-2 rounded-md text-sm font-medium bg-neutral-800 text-white"
-      : "px-3 py-2 text-sm text-neutral-300 hover:bg-neutral-800 rounded";
+      ? "block w-full px-3 py-2 rounded-md text-sm font-medium bg-neutral-800 text-white"
+      : "block w-full px-3 py-2 text-sm text-neutral-300 hover:bg-neutral-800 rounded font-semibold"
 
+  // px-3 py-2 text-sm hover:bg-neutral-800 rounded
   return (
     <header className="fixed top-0 inset-x-0 z-50 border-b border-neutral-800 bg-neutral-900/80 backdrop-blur supports-backdrop-filter:bg-neutral-900/60">
 
@@ -46,9 +47,11 @@ export default function Navbar() {
               Calendar
             </NavLink>
 
-            <div className="px-3 py-2 text-sm text-neutral-300 hover:bg-neutral-800 rounded">
+            <NavLink to="/student/chat-groups" className={navClass}>
               Chat
-            </div>
+            </NavLink>
+
+
 
             {/* MORE */}
             <div className="relative group">
@@ -112,12 +115,14 @@ export default function Navbar() {
               </div>
 
               <div className="p-2">
-                <div className="px-3 py-2 hover:bg-neutral-800 rounded cursor-pointer">
+                <NavLink to="/student/profile" className={navClass}>
                   View Profile
-                </div>
+                </NavLink>
 
-                <div className="px-3 py-2 hover:bg-neutral-800 rounded cursor-pointer">
-                  Logout
+                <div>
+                  <NavLink to="/Login" className={navClass}>
+                    Logout
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -156,3 +161,4 @@ export default function Navbar() {
     </header>
   );
 }
+

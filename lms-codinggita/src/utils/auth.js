@@ -6,6 +6,7 @@ export const students = [
     email: "jilan2410@gmail.com",
     mobile: "7984088939",
     university: "SUxCG 714",
+    gender:"Male",
 
     image: "https://avatars.githubusercontent.com/u/224968812?v=4",
 
